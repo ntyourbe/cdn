@@ -1,0 +1,17 @@
+<script>
+  const links = {
+    "abc": "https://google.com",
+    "xyz": "https://youtube.com"
+  };
+
+  let path = window.location.pathname;
+
+  // kalau pakai repo project
+  path = path.replace("/cdn/", "").replace("/", "");
+
+  if (links[path]) {
+    window.location.href = links[path];
+  } else {
+    document.body.innerHTML = "Link tidak ditemukan";
+  }
+</script>
