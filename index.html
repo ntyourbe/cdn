@@ -1,0 +1,12 @@
+<script>
+  const links = {
+    "abc": "https://google.com",
+    "xyz": "https://youtube.com"
+  };
+
+  const path = window.location.pathname.replace("/", "");
+  
+  if (links[path]) {
+    window.location.href = links[path];
+  }
+</script>
